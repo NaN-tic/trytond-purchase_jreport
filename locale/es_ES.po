@@ -1,10 +1,46 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
-msgctxt "model:ir.action,name:report_purchase_request"
-msgid "Purchase Request"
-msgstr "Solicitud de compra"
+msgctxt "field:purchase.configuration,purchase_qty_decimal:"
+msgid "Purchase Qty Decimal"
+msgstr "Decimal de Cant. en compra"
+
+msgctxt "field:purchase.configuration.company,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:purchase.configuration.company,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:purchase.configuration.company,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:purchase.configuration.company,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:purchase.configuration.company,purchase_qty_decimal:"
+msgid "Purchase Qty Decimal"
+msgstr "Decimal de Cant. en compra"
+
+msgctxt "field:purchase.configuration.company,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:purchase.configuration.company,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:purchase.configuration.company,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "help:purchase.configuration,purchase_qty_decimal:"
+msgid "Show qty with or without decimals"
+msgstr "Mostrar la Cant. con o sin decimales"
 
 msgctxt "jasper:purchase.purchase:"
 msgid "Date"
@@ -13,46 +49,46 @@ msgstr "Fecha"
 msgctxt "jasper:purchase.purchase:"
 msgid "Description"
 msgstr "Descripción"
+
+msgctxt "jasper:purchase.purchase:"
+msgid "Payment Term"
+msgstr "Plazo de pago"
+
+msgctxt "jasper:purchase.purchase:"
+msgid "Payment Type"
+msgstr "Tipo de pago"
 
 msgctxt "jasper:purchase.purchase:"
 msgid "Price"
 msgstr "Precio"
 
 msgctxt "jasper:purchase.purchase:"
-msgid "Qty"
-msgstr "Cant."
+msgid "Purchase Order"
+msgstr "Pedido compra"
 
 msgctxt "jasper:purchase.purchase:"
 msgid "Purchase Request"
 msgstr "Solicitud de compra"
 
 msgctxt "jasper:purchase.purchase:"
-msgid "Payment Term"
-msgstr "Plazo de pago"
+msgid "Qty"
+msgstr "Cant."
 
 msgctxt "jasper:purchase.purchase:"
-msgid "Payment Type"
-msgstr "Tipo de pago"
-
-msgctxt "jasper:purchase.purchase:"
-msgid "Purchase Order"
-msgstr "Pedido compra"
+msgid "Supplier reference"
+msgstr "Referencia proveedor"
 
 msgctxt "jasper:purchase.purchase:"
 msgid "Tax"
 msgstr "Impuestos"
 
 msgctxt "jasper:purchase.purchase:"
-msgid "Untaxed"
-msgstr "Base imponible"
-
-msgctxt "jasper:purchase.purchase:"
 msgid "Total"
 msgstr "Total"
 
 msgctxt "jasper:purchase.purchase:"
-msgid "Supplier reference"
-msgstr "Referencia proveedor"
+msgid "Untaxed"
+msgstr "Base imponible"
 
 msgctxt "jasper:purchase.purchase_request:"
 msgid "Date"
@@ -63,14 +99,6 @@ msgid "Description"
 msgstr "Descripción"
 
 msgctxt "jasper:purchase.purchase_request:"
-msgid "Qty"
-msgstr "Cant."
-
-msgctxt "jasper:purchase.purchase_request:"
-msgid "Purchase Request"
-msgstr "Solicitud de compra"
-
-msgctxt "jasper:purchase.purchase_request:"
 msgid "Payment Term"
 msgstr "Plazo de pago"
 
@@ -83,5 +111,21 @@ msgid "Purchase Order"
 msgstr "Pedido compra"
 
 msgctxt "jasper:purchase.purchase_request:"
+msgid "Purchase Request"
+msgstr "Solicitud de compra"
+
+msgctxt "jasper:purchase.purchase_request:"
+msgid "Qty"
+msgstr "Cant."
+
+msgctxt "jasper:purchase.purchase_request:"
 msgid "Supplier reference"
 msgstr "Referencia proveedor"
+
+msgctxt "model:ir.action,name:report_purchase_request"
+msgid "Purchase Request"
+msgstr "Solicitud de compra"
+
+msgctxt "model:purchase.configuration.company,name:"
+msgid "Purchase Configuration per Company"
+msgstr "Configuración de compra por compañía"
