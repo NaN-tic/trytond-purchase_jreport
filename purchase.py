@@ -20,7 +20,7 @@ class PurchaseReport(JasperReport):
             'purchase_qty_decimal': config.purchase_qty_decimal
             }
         if 'parameters' in data:
-            data['parameters'] += parameters
+            data['parameters'].update(parameters)
         else:
             data['parameters'] = parameters
         return super(PurchaseReport, cls).execute(ids, data)
@@ -38,7 +38,7 @@ class PurchaseRequestReport(JasperReport):
             'purchase_qty_decimal': config.purchase_qty_decimal
             }
         if 'parameters' in data:
-            data['parameters'] += parameters
+            data['parameters'].update(parameters)
         else:
             data['parameters'] = parameters
         return super(PurchaseRequestReport, cls).execute(ids, data)

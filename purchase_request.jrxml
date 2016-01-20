@@ -54,8 +54,8 @@
 	<field name="party-name" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/party-party/addresses-addresses/name-name]]></fieldDescription>
 	</field>
-	<field name="party-full_address_lang" class="java.lang.String">
-		<fieldDescription><![CDATA[/data/record/invoice_address-invoice_address/full_address_lang-full_address_lang]]></fieldDescription>
+	<field name="invoice_full_address" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/invoice_address/full_address]]></fieldDescription>
 	</field>
 	<field name="party-street" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/party-party/addresses-addresses/street-street]]></fieldDescription>
@@ -159,7 +159,7 @@
 					<textElement markup="styled">
 						<font size="9"/>
 					</textElement>
-					<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Helvetica'>"+$F{party-full_name}.replaceAll("&","&amp;")+"</style>\n"+$F{party-full_address_lang}]]></textFieldExpression>
+					<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Helvetica'>"+$F{party-full_name}.replaceAll("&","&amp;")+"</style>\n"+$F{invoice_full_address}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="10" y="5" width="295" height="15" forecolor="#010101" uuid="38d19167-80e2-4261-bed5-9763562e5546"/>
@@ -248,7 +248,11 @@
 				<textElement markup="styled">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{line-note} ? $F{line-description}+"\n<style forecolor=\"#808080\">"+$F{line-note}+"</style>" : $F{line-description}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{line-note}
+?
+    $F{line-description} + "\n<style forecolor=\"#808080\">   " + $F{line-note} + "</style>"
+:
+    $F{line-description}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="16" y="2" width="40" height="12" uuid="845e3c2f-289f-4749-be42-e03b42c5ab6c"/>
