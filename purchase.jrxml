@@ -296,13 +296,11 @@
 					<textFieldExpression><![CDATA[($F{payment_term-name} ? tr($V{L},"Payment Term")+": "+ $F{payment_term-name}.get($F{party-lang}) : '')]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="10" y="28" width="367" height="23" uuid="98c173b1-881b-4b80-b4bb-8f95ea8abdbd">
-						<printWhenExpression><![CDATA[$F{payment_type-name}.get($F{party-lang}) != null]]></printWhenExpression>
-					</reportElement>
+					<reportElement x="10" y="28" width="367" height="23" uuid="98c173b1-881b-4b80-b4bb-8f95ea8abdbd"/>
 					<textElement>
 						<font size="9" isBold="false"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{payment_term-name} ? tr($V{L},"Payment Type")+": "+$F{payment_type-name}.get($F{party-lang})+"\n"+$F{payment_type-note}.get($F{party-lang}, '') : '']]></textFieldExpression>
+					<textFieldExpression><![CDATA[($F{payment_type-name} ? tr($V{L},"Payment Type")+": "+$F{payment_type-name}.get($F{party-lang}) : '') + ($F{payment_type-note} ? "\n"+$F{payment_type-note}.get($F{party-lang}, '') : '')]]></textFieldExpression>
 				</textField>
 			</band>
 		</groupFooter>
