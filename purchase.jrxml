@@ -289,13 +289,11 @@
 					<reportElement x="10" y="3" width="530" height="1" uuid="b7222a06-bef9-4e1d-9d7a-be5d6923c473"/>
 				</line>
 				<textField>
-					<reportElement x="10" y="16" width="367" height="12" uuid="2ec6e329-9835-42af-bf17-bf12b2127f0b">
-						<printWhenExpression><![CDATA[$F{payment_term-name} != null]]></printWhenExpression>
-					</reportElement>
+					<reportElement x="10" y="16" width="367" height="12" uuid="2ec6e329-9835-42af-bf17-bf12b2127f0b"/>
 					<textElement>
 						<font size="9" isBold="false"/>
 					</textElement>
-					<textFieldExpression><![CDATA[tr($V{L},"Payment Term")+": "+$F{payment_term-name}.get($F{party-lang})]]></textFieldExpression>
+					<textFieldExpression><![CDATA[($F{payment_term-name} ? tr($V{L},"Payment Term")+": "+ $F{payment_term-name}.get($F{party-lang}) : '')]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="10" y="28" width="367" height="23" uuid="98c173b1-881b-4b80-b4bb-8f95ea8abdbd">
