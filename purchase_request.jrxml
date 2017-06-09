@@ -83,8 +83,8 @@
 	<field name="payment_type-note" class="java.lang.Object">
 		<fieldDescription><![CDATA[/data/record/payment_type-payment_type/note-note]]></fieldDescription>
 	</field>
-	<field name="reference-reference" class="java.lang.String">
-		<fieldDescription><![CDATA[/data/record/reference-reference]]></fieldDescription>
+	<field name="number-number" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/number-number]]></fieldDescription>
 	</field>
 	<field name="state-state" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/state-state]]></fieldDescription>
@@ -168,7 +168,7 @@
 					<textElement textAlignment="Left">
 						<font size="12" isBold="true"/>
 					</textElement>
-					<textFieldExpression><![CDATA[($F{state-state}.equals("quotation") || $F{state-state}.equals("draft")) ? tr($V{L},"Purchase Request")+" "+$F{reference-reference} : tr($V{L},"Purchase Order")+" "+$F{reference-reference}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[($F{state-state}.equals("quotation") || $F{state-state}.equals("draft")) ? tr($V{L},"Purchase Request")+" "+$F{number-number} : tr($V{L},"Purchase Order")+" "+$F{number-number}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="10" y="20" width="228" height="12" uuid="26e6798f-861a-4c79-87d9-3a4c69a4afb3">
