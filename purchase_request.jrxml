@@ -161,7 +161,7 @@
 					<textElement markup="styled">
 						<font size="9"/>
 					</textElement>
-					<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Helvetica'>"+$F{party-full_name}.replaceAll("&","&amp;")+"</style>\n"+$F{party-full_address_lang}]]></textFieldExpression>
+					<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Helvetica'>"+$F{party-full_name}.replaceAll("&","&amp;")+"</style>\n"+$F{party-full_address_lang}.replaceAll("&","&amp;")]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="10" y="5" width="295" height="15" forecolor="#010101" uuid="38d19167-80e2-4261-bed5-9763562e5546"/>
