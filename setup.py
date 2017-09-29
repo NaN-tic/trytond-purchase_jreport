@@ -7,6 +7,12 @@ from setuptools import setup
 import re
 import ConfigParser
 
+MODULE2PREFIX = {
+    'jasper_reports_options': 'trytonzz',
+    'party_lang': 'trytonzz',
+    'purchase_payment_type': 'trytonspain',
+}
+
 config = ConfigParser.ConfigParser()
 config.readfp(open('tryton.cfg'))
 info = dict(config.items('tryton'))
@@ -17,14 +23,25 @@ major_version, minor_version, _ = info.get('version', '0.0.1').split('.', 2)
 major_version = int(major_version)
 minor_version = int(minor_version)
 
+def get_require_version(name):
+    if minor_version % 2:
+        require = '%s >= %s.%s.dev0, < %s.%s'
+    else:
+        require = '%s >= %s.%s, < %s.%s'
+    require %= (
+        name, major_version, minor_version, major_version, minor_version + 1)
+    return require
+
 requires = []
 for dep in info.get('depends', []):
     if not re.match(r'(ir|res|webdav)(\W|$)', dep):
-        requires.append('trytond_%s >= %s.%s, < %s.%s' %
-                (dep, major_version, minor_version, major_version,
-                    minor_version + 1))
-requires.append('trytond >= %s.%s, < %s.%s' %
-        (major_version, minor_version, major_version, minor_version + 1))
+        prefix = MODULE2PREFIX.get(dep, 'trytond')
+        requires.append(
+            '%s_%s >= %s.%s, < %s.%s' %
+            (prefix, dep, major_version, minor_version,
+                major_version, minor_version + 1))
+requires.append(get_require_version('trytond'))
+
 
 setup(name='trytonzz_purchase_jreport',
     version=info.get('version', '0.0.1'),
@@ -40,7 +57,7 @@ setup(name='trytonzz_purchase_jreport',
         ],
     package_data={
         'trytond.modules.purchase_jreport': info.get('xml', []) \
-            + ['tryton.cfg', 'locale/*.po'],
+            + ['tryton.cfg', 'locale/*.po', '*.jrxml'],
         },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
