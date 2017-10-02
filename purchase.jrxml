@@ -128,6 +128,12 @@
 	<field name="line-note" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/lines-lines/note-note]]></fieldDescription>
 	</field>
+	<field name="line-type" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/lines-lines/type-type]]></fieldDescription>
+	</field>
+	<field name="line-discount" class="java.lang.Number">
+		<fieldDescription><![CDATA[/data/record/lines-lines/discount-discount]]></fieldDescription>
+	</field>
 	<field name="user-name" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/create_uid-create_uid/name-name]]></fieldDescription>
 	</field>
@@ -160,7 +166,7 @@
 					<textFieldExpression><![CDATA[tr($V{L},"Qty")]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="435" y="75" width="50" height="12" uuid="e7c3d55a-4cc7-43eb-8105-5b5eae5f2ddf"/>
+					<reportElement x="412" y="75" width="50" height="12" uuid="e7c3d55a-4cc7-43eb-8105-5b5eae5f2ddf"/>
 					<textElement textAlignment="Right">
 						<font size="9"/>
 					</textElement>
@@ -328,14 +334,14 @@
 	<detail>
 		<band height="19" splitType="Stretch">
 			<textField isStretchWithOverflow="true">
-				<reportElement x="57" y="2" width="367" height="12" uuid="fee4defc-7102-4a87-85a6-b9e0e5c7c74f"/>
+				<reportElement x="57" y="2" width="350" height="12" uuid="fee4defc-7102-4a87-85a6-b9e0e5c7c74f"/>
 				<textElement markup="styled">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{line-note} ? $F{line-description}+"\n<style forecolor=\"#808080\">"+$F{line-note}+"</style>" : $F{line-description}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00;-#,##0.00">
-				<reportElement x="435" y="2" width="50" height="12" uuid="52becf9f-b17b-495a-a978-e06b601c8c55"/>
+				<reportElement x="412" y="2" width="50" height="12" uuid="52becf9f-b17b-495a-a978-e06b601c8c55"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
@@ -354,6 +360,15 @@
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{line-quantity} ? $F{company-purchase_qty} ? (int)Double.valueOf($F{line-quantity}.trim()).doubleValue() : Double.valueOf($F{line-quantity}.trim()).doubleValue() : '0']]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="465" y="2" width="25" height="12" uuid="18be7884-351f-4793-a503-9ab999c9eb09">
+					<printWhenExpression><![CDATA[$F{line-type} == "line"]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{line-discount} ? "-"+ (int)Double.valueOf($F{line-discount}*100).doubleValue()+"%" : ""]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
