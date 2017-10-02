@@ -24,6 +24,13 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="action" ref="report_purchase_request"/>
         </record>
     </data>
+    <data depends="purchase_discount">
+        <record model="ir.action.report" id="purchase_discount.report_purchase">
+            <field name="name">Purchase</field>
+            <field name="model">purchase.purchase</field>
+            <field name="report_name">purchase.purchase</field>
+            <field name="report">purchase_jreport/purchase.jrxml</field>
+            <field name="extension">pdf</field>
+        </record>
+    </data>
 </tryton>
-
-
