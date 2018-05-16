@@ -9,6 +9,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="report_name">purchase.purchase</field>
             <field name="report">purchase_jreport/purchase.jrxml</field>
             <field name="extension">pdf</field>
+            <field name="template_extension">jrxml</field>
         </record>
 
         <record model="ir.action.report" id="report_purchase_request">
@@ -17,6 +18,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="report_name">purchase.purchase_request</field>
             <field name="report">purchase_jreport/purchase_request.jrxml</field>
             <field name="extension">pdf</field>
+            <field name="template_extension">jrxml</field>
         </record>
         <record model="ir.action.keyword" id="report_purchase_request_keyword">
             <field name="keyword">form_print</field>
@@ -24,6 +26,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="action" ref="report_purchase_request"/>
         </record>
     </data>
+
     <data depends="purchase_discount">
         <record model="ir.action.report" id="purchase_discount.report_purchase">
             <field name="name">Purchase</field>
@@ -31,6 +34,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="report_name">purchase.purchase</field>
             <field name="report">purchase_jreport/purchase.jrxml</field>
             <field name="extension">pdf</field>
+            <field name="template_extension">jrxml</field>
         </record>
     </data>
 </tryton>

@@ -6,82 +6,82 @@ msgctxt "model:ir.action,name:report_purchase_request"
 msgid "Purchase Request"
 msgstr "Achat"
 
-msgctxt "jasper:purchase.purchase:"
+msgctxt "report:purchase.purchase:"
 msgid "Date"
 msgstr "Date"
 
-msgctxt "jasper:purchase.purchase:"
+msgctxt "report:purchase.purchase:"
 msgid "Description"
 msgstr "Description"
 
-msgctxt "jasper:purchase.purchase:"
+msgctxt "report:purchase.purchase:"
 msgid "Price"
 msgstr "Prix"
 
-msgctxt "jasper:purchase.purchase:"
+msgctxt "report:purchase.purchase:"
 msgid "Qty"
 msgstr "Qté."
 
-msgctxt "jasper:purchase.purchase:"
+msgctxt "report:purchase.purchase:"
 msgid "Purchase Request"
 msgstr "Achat"
 
-msgctxt "jasper:purchase.purchase:"
+msgctxt "report:purchase.purchase:"
 msgid "Payment Term"
 msgstr "Conditions de paiement"
 
-msgctxt "jasper:purchase.purchase:"
+msgctxt "report:purchase.purchase:"
 msgid "Payment Type"
 msgstr "Mode de paiement"
 
-msgctxt "jasper:purchase.purchase:"
+msgctxt "report:purchase.purchase:"
 msgid "Purchase Order"
 msgstr "Commande"
 
-msgctxt "jasper:purchase.purchase:"
+msgctxt "report:purchase.purchase:"
 msgid "Tax"
 msgstr "Taxe"
 
-msgctxt "jasper:purchase.purchase:"
+msgctxt "report:purchase.purchase:"
 msgid "Untaxed"
 msgstr "Hors taxe"
 
-msgctxt "jasper:purchase.purchase:"
+msgctxt "report:purchase.purchase:"
 msgid "Total"
 msgstr "Total"
 
-msgctxt "jasper:purchase.purchase:"
+msgctxt "report:purchase.purchase:"
 msgid "Supplier reference"
 msgstr "Référence fournisseur"
 
-msgctxt "jasper:purchase.purchase_request:"
+msgctxt "report:purchase.purchase_request:"
 msgid "Date"
 msgstr "Date"
 
-msgctxt "jasper:purchase.purchase_request:"
+msgctxt "report:purchase.purchase_request:"
 msgid "Description"
 msgstr "Description"
 
-msgctxt "jasper:purchase.purchase_request:"
+msgctxt "report:purchase.purchase_request:"
 msgid "Qty"
 msgstr "Qté."
 
-msgctxt "jasper:purchase.purchase_request:"
+msgctxt "report:purchase.purchase_request:"
 msgid "Purchase Request"
 msgstr "Demande d'achat"
 
-msgctxt "jasper:purchase.purchase_request:"
+msgctxt "report:purchase.purchase_request:"
 msgid "Payment Term"
 msgstr "Conditions de paiement"
 
-msgctxt "jasper:purchase.purchase_request:"
+msgctxt "report:purchase.purchase_request:"
 msgid "Payment Type"
 msgstr "Mode de paiement"
 
-msgctxt "jasper:purchase.purchase_request:"
+msgctxt "report:purchase.purchase_request:"
 msgid "Purchase Order"
 msgstr "Commande"
 
-msgctxt "jasper:purchase.purchase_request:"
+msgctxt "report:purchase.purchase_request:"
 msgid "Supplier reference"
 msgstr "Référence fournisseur"

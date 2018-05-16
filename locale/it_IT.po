@@ -1,87 +1,83 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "report:purchase.purchase:"
 msgid "Date"
-msgstr "Fecha"
+msgstr "Data"
 
 msgctxt "report:purchase.purchase:"
 msgid "Description"
-msgstr "Descripción"
+msgstr "Descrizione"
 
 msgctxt "report:purchase.purchase:"
 msgid "Payment Term"
-msgstr "Plazo de pago"
+msgstr "Termini di Pagamento"
 
 msgctxt "report:purchase.purchase:"
 msgid "Payment Type"
-msgstr "Tipo de pago"
+msgstr "Forma di Pagamento"
 
 msgctxt "report:purchase.purchase:"
 msgid "Price"
-msgstr "Precio"
+msgstr "Prezzo"
 
 msgctxt "report:purchase.purchase:"
 msgid "Purchase Order"
-msgstr "Pedido compra"
+msgstr "Ordine di Acquisto"
 
 msgctxt "report:purchase.purchase:"
 msgid "Purchase Request"
-msgstr "Solicitud de compra"
+msgstr "Richiesta di Acquisto"
 
 msgctxt "report:purchase.purchase:"
 msgid "Qty"
-msgstr "Cant."
+msgstr "Qtà."
 
 msgctxt "report:purchase.purchase:"
 msgid "Supplier reference"
-msgstr "Referencia proveedor"
+msgstr "Referenza Fornitore"
 
 msgctxt "report:purchase.purchase:"
 msgid "Tax"
-msgstr "Impuestos"
+msgstr "Tassa"
 
 msgctxt "report:purchase.purchase:"
 msgid "Total"
-msgstr "Total"
+msgstr "Totale"
 
 msgctxt "report:purchase.purchase:"
 msgid "Untaxed"
-msgstr "Base imponible"
+msgstr "Base Imponibile"
 
 msgctxt "report:purchase.purchase_request:"
 msgid "Date"
-msgstr "Fecha"
+msgstr "Data"
 
 msgctxt "report:purchase.purchase_request:"
 msgid "Description"
-msgstr "Descripción"
+msgstr "Descrizione"
 
 msgctxt "report:purchase.purchase_request:"
 msgid "Payment Term"
-msgstr "Plazo de pago"
+msgstr "Termini di Pagamento"
 
 msgctxt "report:purchase.purchase_request:"
 msgid "Payment Type"
-msgstr "Tipo de pago"
+msgstr "Forma di Pagamento"
 
 msgctxt "report:purchase.purchase_request:"
 msgid "Purchase Order"
-msgstr "Pedido compra"
+msgstr "Ordine di Acquisto"
 
 msgctxt "report:purchase.purchase_request:"
 msgid "Purchase Request"
-msgstr "Solicitud de compra"
+msgstr "Richiesta di Acquisto"
 
 msgctxt "report:purchase.purchase_request:"
 msgid "Qty"
-msgstr "Cant."
+msgstr "Qtà."
 
 msgctxt "report:purchase.purchase_request:"
 msgid "Supplier reference"
-msgstr "Referencia proveedor"
-
-msgctxt "model:ir.action,name:report_purchase_request"
-msgid "Purchase Request"
-msgstr "Solicitud de compra"
+msgstr "Referenza Fornitore"
