@@ -7,11 +7,9 @@ from trytond.modules.jasper_reports.jasper import JasperReport
 __all__ = ['PurchaseReport', 'PurchaseRequestReport']
 
 
-class PurchaseReport(JasperReport):
-    __metaclass__ = PoolMeta
+class PurchaseReport(JasperReport, metaclass=PoolMeta):
     __name__ = 'purchase.purchase'
 
 
-class PurchaseRequestReport(JasperReport):
-    __metaclass__ = PoolMeta
+class PurchaseRequestReport(JasperReport, metaclass=PoolMeta):
     __name__ = 'purchase.purchase_request'
