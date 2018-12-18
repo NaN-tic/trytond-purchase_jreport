@@ -135,7 +135,7 @@
 		<fieldDescription><![CDATA[/data/record/create_uid-create_uid/email-email]]></fieldDescription>
 	</field>
 	<field name="supplier_reference-supplier_reference" class="java.lang.String">
-		<fieldDescription><![CDATA[/data/record/supplier_reference-supplier_reference]]></fieldDescription>
+		<fieldDescription><![CDATA[/data/record/reference-reference]]></fieldDescription>
 	</field>
 	<variable name="L" class="java.util.Locale">
 		<variableExpression><![CDATA[$F{party-lang} != null && $F{party-lang}.length() == 5 ? new Locale($F{party-lang}) : ( $F{party-lang} != null && $F{party-lang}.length() == 2 ? new Locale($F{party-lang}) : new Locale('en_US'))]]></variableExpression>
