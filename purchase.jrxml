@@ -154,7 +154,7 @@
 		<variableExpression><![CDATA[$F{party-lang} != null && $F{party-lang}.length() == 5 ? new Locale($F{party-lang}) : ( $F{party-lang} != null && $F{party-lang}.length() == 2 ? new Locale($F{party-lang}) : new Locale('en_US'))]]></variableExpression>
 		<initialValueExpression><![CDATA[$F{party-lang} != null && $F{party-lang}.length() == 5 ? new Locale($F{party-lang}) : ( $F{party-lang} != null && $F{party-lang}.length() == 2 ? new Locale($F{party-lang}) : new Locale('en_US'))]]></initialValueExpression>
 	</variable>
-	<group name="Purchase" isStartNewPage="true" isResetPageNumber="true">
+	<group name="Party" isStartNewPage="true" isResetPageNumber="true">
 		<groupExpression><![CDATA[$F{id}]]></groupExpression>
 		<groupHeader>
 			<band height="75">
@@ -192,8 +192,45 @@
 				</textField>
 			</band>
 		</groupHeader>
+	</group>
+	<group name="Purchase" isStartNewPage="true" isResetPageNumber="true" isReprintHeaderOnEachPage="true" keepTogether="true">
+		<groupHeader>
+			<band height="20">
+				<textField>
+					<reportElement x="16" y="3" width="40" height="12" uuid="11ac5fde-4fc0-418d-bf89-a440dcf11d91"/>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[tr($V{L},"Qty")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="57" y="3" width="148" height="12" uuid="480c2baa-c354-4696-9624-c6328ee9294c"/>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[tr($V{L},"Description")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="412" y="3" width="50" height="12" uuid="e7c3d55a-4cc7-43eb-8105-5b5eae5f2ddf"/>
+					<textElement textAlignment="Right">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[tr($V{L},"Price")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="490" y="3" width="48" height="12" uuid="d32f25ca-115d-4069-9f00-51fa8cfd3237"/>
+					<textElement textAlignment="Right">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[tr($V{L},"Total")]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="10" y="16" width="530" height="1" uuid="94720de1-ef7d-4a5b-8911-761fdf921c0b"/>
+				</line>
+			</band>
+		</groupHeader>
 		<groupFooter>
-			<band height="87" splitType="Prevent">
+			<band height="87">
 				<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="false">
 					<reportElement x="445" y="57" width="80" height="14" uuid="656cea85-f02c-41bf-9e8a-90e24286e431"/>
 					<textElement textAlignment="Right">
@@ -289,43 +326,6 @@
 				</textField>
 			</band>
 		</groupFooter>
-	</group>
-	<group name="Header Detail">
-		<groupHeader>
-			<band height="20">
-				<textField>
-					<reportElement x="16" y="3" width="40" height="12" uuid="11ac5fde-4fc0-418d-bf89-a440dcf11d91"/>
-					<textElement textAlignment="Center">
-						<font size="9"/>
-					</textElement>
-					<textFieldExpression><![CDATA[tr($V{L},"Qty")]]></textFieldExpression>
-				</textField>
-				<textField>
-					<reportElement x="57" y="3" width="148" height="12" uuid="480c2baa-c354-4696-9624-c6328ee9294c"/>
-					<textElement>
-						<font size="9"/>
-					</textElement>
-					<textFieldExpression><![CDATA[tr($V{L},"Description")]]></textFieldExpression>
-				</textField>
-				<textField>
-					<reportElement x="412" y="3" width="50" height="12" uuid="e7c3d55a-4cc7-43eb-8105-5b5eae5f2ddf"/>
-					<textElement textAlignment="Right">
-						<font size="9"/>
-					</textElement>
-					<textFieldExpression><![CDATA[tr($V{L},"Price")]]></textFieldExpression>
-				</textField>
-				<textField>
-					<reportElement x="490" y="3" width="48" height="12" uuid="d32f25ca-115d-4069-9f00-51fa8cfd3237"/>
-					<textElement textAlignment="Right">
-						<font size="9"/>
-					</textElement>
-					<textFieldExpression><![CDATA[tr($V{L},"Total")]]></textFieldExpression>
-				</textField>
-				<line>
-					<reportElement x="10" y="16" width="530" height="1" uuid="94720de1-ef7d-4a5b-8911-761fdf921c0b"/>
-				</line>
-			</band>
-		</groupHeader>
 	</group>
 	<pageHeader>
 		<band height="87">

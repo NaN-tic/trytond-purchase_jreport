@@ -142,7 +142,7 @@
 		<variableExpression><![CDATA[$F{party-lang} != null && $F{party-lang}.length() == 5 ? new Locale($F{party-lang}) : ( $F{party-lang} != null && $F{party-lang}.length() == 2 ? new Locale($F{party-lang}) : new Locale('en_US'))]]></variableExpression>
 		<initialValueExpression><![CDATA[$F{party-lang} != null && $F{party-lang}.length() == 5 ? new Locale($F{party-lang}) : ( $F{party-lang} != null && $F{party-lang}.length() == 2 ? new Locale($F{party-lang}) : new Locale('en_US'))]]></initialValueExpression>
 	</variable>
-	<group name="Purchase" isStartNewPage="true" isResetPageNumber="true">
+	<group name="Party" isStartNewPage="true" isResetPageNumber="true">
 		<groupExpression><![CDATA[$F{id}]]></groupExpression>
 		<groupHeader>
 			<band height="78">
@@ -180,40 +180,8 @@
 				</textField>
 			</band>
 		</groupHeader>
-		<groupFooter>
-			<band height="87" splitType="Prevent">
-				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-					<reportElement x="10" y="53" width="534" height="29" isRemoveLineWhenBlank="true" uuid="e47cc87a-2ba2-4334-8d89-8103abed4308"/>
-					<textElement>
-						<font size="9"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{comment-comment}]]></textFieldExpression>
-				</textField>
-				<line>
-					<reportElement x="10" y="3" width="530" height="1" uuid="b7222a06-bef9-4e1d-9d7a-be5d6923c473"/>
-				</line>
-				<textField>
-					<reportElement x="10" y="16" width="534" height="12" uuid="2ec6e329-9835-42af-bf17-bf12b2127f0b">
-						<printWhenExpression><![CDATA[$F{payment_term-name} != null]]></printWhenExpression>
-					</reportElement>
-					<textElement>
-						<font size="9" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA[tr($V{L},"Payment Term")+": "+$F{payment_term-name}.get($F{party-lang})]]></textFieldExpression>
-				</textField>
-				<textField>
-					<reportElement x="10" y="28" width="534" height="23" uuid="98c173b1-881b-4b80-b4bb-8f95ea8abdbd">
-						<printWhenExpression><![CDATA[$F{payment_type-name}.get($F{party-lang}) != null]]></printWhenExpression>
-					</reportElement>
-					<textElement>
-						<font size="9" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{payment_term-name} ? tr($V{L},"Payment Type")+": "+$F{payment_type-name}.get($F{party-lang})+"\n"+$F{payment_type-note}.get($F{party-lang}, '') : '']]></textFieldExpression>
-				</textField>
-			</band>
-		</groupFooter>
 	</group>
-	<group name="Header Detail" isStartNewPage="true" isResetPageNumber="true" isReprintHeaderOnEachPage="true" footerPosition="ForceAtBottom" keepTogether="true">
+	<group name="Purchase" isStartNewPage="true" isResetPageNumber="true" isReprintHeaderOnEachPage="true" footerPosition="ForceAtBottom" keepTogether="true">
 		<groupHeader>
 			<band height="20">
 				<textField>
@@ -235,6 +203,38 @@
 				</line>
 			</band>
 		</groupHeader>
+		<groupFooter>
+			<band height="87">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="13" y="53" width="534" height="29" isRemoveLineWhenBlank="true" uuid="e47cc87a-2ba2-4334-8d89-8103abed4308"/>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{comment-comment}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="13" y="3" width="530" height="1" uuid="b7222a06-bef9-4e1d-9d7a-be5d6923c473"/>
+				</line>
+				<textField>
+					<reportElement x="13" y="16" width="534" height="12" uuid="2ec6e329-9835-42af-bf17-bf12b2127f0b">
+						<printWhenExpression><![CDATA[$F{payment_term-name} != null]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[tr($V{L},"Payment Term")+": "+$F{payment_term-name}.get($F{party-lang})]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="13" y="28" width="534" height="23" uuid="98c173b1-881b-4b80-b4bb-8f95ea8abdbd">
+						<printWhenExpression><![CDATA[$F{payment_type-name}.get($F{party-lang}) != null]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{payment_term-name} ? tr($V{L},"Payment Type")+": "+$F{payment_type-name}.get($F{party-lang})+"\n"+$F{payment_type-note}.get($F{party-lang}, '') : '']]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
 	</group>
 	<pageHeader>
 		<band height="87">
