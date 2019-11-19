@@ -14,6 +14,11 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="extension">pdf</field>
             <field name="template_extension">jrxml</field>
         </record>
+        <record model="ir.action.keyword" id="report_purchase_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">purchase.purchase,-1</field>
+            <field name="action" ref="report_purchase"/>
+        </record>
 
         <record model="ir.action.report" id="report_purchase_request">
             <field name="name">Purchase Request</field>
