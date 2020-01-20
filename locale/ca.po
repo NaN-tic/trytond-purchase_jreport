@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
@@ -81,6 +81,10 @@ msgstr "Qt."
 msgctxt "report:purchase.purchase_request:"
 msgid "Supplier reference"
 msgstr "Referència proveïdor"
+
+msgctxt "model:ir.action,name:report_purchase"
+msgid "Purchase"
+msgstr "Compra"
 
 msgctxt "model:ir.action,name:report_purchase_request"
 msgid "Purchase Request"
