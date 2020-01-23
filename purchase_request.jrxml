@@ -22,7 +22,7 @@
 		<fieldDescription><![CDATA[/data/record/company-company/party-party/name-name]]></fieldDescription>
 	</field>
 	<field name="company-vat_code" class="java.lang.String">
-		<fieldDescription><![CDATA[/data/record/company-company/party-party/vat_code-vat_code]]></fieldDescription>
+		<fieldDescription><![CDATA[/data/record/company-company/party-party/tax_identifier-tax_identifier/code-code]]></fieldDescription>
 	</field>
 	<field name="company-phone" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/company-company/party-party/phone-phone]]></fieldDescription>
