@@ -138,7 +138,7 @@
 	<field name="line-type" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/lines-lines/type-type]]></fieldDescription>
 	</field>
-	<field name="line-discount" class="java.lang.Number">
+	<field name="line-discount" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/lines-lines/discount-discount]]></fieldDescription>
 	</field>
 	<field name="user-name" class="java.lang.String">
@@ -381,7 +381,7 @@
 				<textElement textAlignment="Left">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{line-discount} ? "-"+ (int)Double.valueOf($F{line-discount}*100).doubleValue()+"%" : ""]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{line-discount} ? $F{line-discount} : ""]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
